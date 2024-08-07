@@ -1,16 +1,12 @@
 
 version: 0.2
 
-env:
-  variables:
-
 phases:
-  install:
-
   build:
     commands:
       - "echo Hello"
+
 artifacts:
   files:
     - '**/*'
-reports:
+

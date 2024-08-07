@@ -31,8 +31,9 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "codepipeline_buck
 }
 
 resource "aws_s3_object" "buildspec_validate" {
-  bucket = aws_s3_bucket.codebuild_templates_bucket.id
-  key    = "builspec_validate.yml"
-  source = "./templates/buildspec_validate.yml"
-  etag   = filemd5("./templates/buildspec_validate.yml")
+  bucket       = aws_s3_bucket.codebuild_templates_bucket.id
+  key          = "builspec_validate.yml"
+  content_type = "text/plain"
+  source       = "./templates/buildspec_validate.yml"
+  etag         = filemd5("./templates/buildspec_validate.yml")
 }

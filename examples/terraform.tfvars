@@ -4,7 +4,6 @@ source_repo_connection_arn = "arn:aws:codeconnections:eu-central-1:058264153756:
 source_repo_id             = "jjankovi/obi-iac"
 source_repo_branch         = "main"
 
-
 stage_input = [
   { name = "validate", category = "Test", owner = "AWS", provider = "CodeBuild", input_artifacts = "SourceOutput", output_artifacts = "ValidateOutput" }
   #  { name = "plan", category = "Test", owner = "AWS", provider = "CodeBuild", input_artifacts = "ValidateOutput", output_artifacts = "PlanOutput" }
